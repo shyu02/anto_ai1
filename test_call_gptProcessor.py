@@ -1,14 +1,15 @@
-# 📁 test_call_gptProcessor.py
-
 import os
 from extractor.dataProcessor_gpt import CalendarDataProcessor
 
-# ⛔ 클래스 정의 안 함, 그냥 인스턴스 생성 + 실행만 함
-
 if __name__ == '__main__':
     print("✅ 직접 실행됨")
-
-    test_file_path = os.path.join("ex_uploads", "texttest.txt")
+    
+    print("[📂 현재 ex_uploads 폴더 안 파일들]:")
+    print(os.listdir(os.path.join(os.path.dirname(__file__), "ex_uploads")))
+    
+    # ✅ 현재 파일 위치 기준으로 절대 경로 구성
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    test_file_path = os.path.join(base_dir, "ex_uploads", "testtext.txt")
 
     processor = CalendarDataProcessor()
     df = processor.process(test_file_path)
