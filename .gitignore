@@ -1,0 +1,16 @@
+# 환경 변수 파일
+.env
+
+# 파이썬 캐시 파일
+__pycache__/
+*.pyc
+
+# 가상환경 폴더 (예: venv, ant_env 등)
+venv/
+ant_env/
+
+# VSCode 설정
+.vscode/
+
+# 테스트 업로드 파일 (선택)
+ex_uploads/testtext.txt
